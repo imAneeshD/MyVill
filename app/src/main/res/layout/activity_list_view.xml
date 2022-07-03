@@ -413,7 +413,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Community"
+                            android:text="noc"
                             android:textAlignment="center" />
 
                     </LinearLayout>
