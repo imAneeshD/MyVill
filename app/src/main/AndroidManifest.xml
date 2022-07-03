@@ -39,8 +39,12 @@
             android:name=".pub.listView"
             android:exported="false" />
         <activity
+            android:name=".pub.road"
+            android:exported="false" />
+        <activity
             android:name=".common.SplashScreen"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
