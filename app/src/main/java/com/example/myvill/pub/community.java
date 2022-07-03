@@ -17,7 +17,8 @@ public class community extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-        web = findViewById(R.id.web);
+        web = findViewById(R.id
+                .web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         web.setWebViewClient(new community.Callback());

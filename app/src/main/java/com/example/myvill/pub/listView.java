@@ -44,4 +44,11 @@ public class listView extends AppCompatActivity {
         Intent intent=new Intent(listView.this,community.class);
         startActivity(intent);
     }
+
+    public void propery(View view) {
+        Intent intent=new Intent(listView.this,property.class);
+        startActivity(intent);
+    }
+
+
 }

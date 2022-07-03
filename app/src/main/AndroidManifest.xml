@@ -27,6 +27,9 @@
             android:name=".pub.community"
             android:exported="false" />
         <activity
+            android:name=".pub.property"
+            android:exported="false" />
+        <activity
             android:name=".pub.services"
             android:exported="false" />
         <activity

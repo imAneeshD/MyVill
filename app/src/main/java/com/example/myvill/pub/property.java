@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
 
-public class generalInfo extends AppCompatActivity {
+public class property extends AppCompatActivity {
     WebView web;
 
     @Override
@@ -20,8 +20,8 @@ public class generalInfo extends AppCompatActivity {
         web = findViewById(R.id.web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new generalInfo.Callback());
-        web.loadUrl("https://panchatantra.kar.nic.in/panchamitra/MainMenu.aspx?gp=1511004003&gpname=%E0%B2%95%E0%B2%AC%E0%B2%95");
+        web.setWebViewClient(new property.Callback());
+        web.loadUrl("http://e-swathu.kar.nic.in/(S(rwz222uxhjjmvw3rfshgetf3))/Issue0fForm9/Frm_PublicSearchForm9.aspx");
     }
 
     private class Callback extends WebViewClient {
