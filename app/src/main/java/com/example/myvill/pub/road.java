@@ -20,7 +20,7 @@ public class road extends AppCompatActivity {
         WebSettings webSettings=web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         web.setWebViewClient(new road.Callback());
-        web.loadUrl("https://google.com");
+        web.loadUrl("https://bsk.karnataka.gov.in/BSK/cs/loadOnlineServicesBeforeLogin");
     }
 
     private class Callback extends WebViewClient {
