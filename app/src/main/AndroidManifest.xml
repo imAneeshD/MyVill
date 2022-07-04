@@ -18,6 +18,9 @@
         android:theme="@style/Theme.MyVill"
         tools:targetApi="31">
         <activity
+            android:name=".pub.list_contacts"
+            android:exported="false" />
+        <activity
             android:name=".pub.contacts"
             android:exported="false" />
         <activity
