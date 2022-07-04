@@ -97,7 +97,14 @@ contentView=findViewById(R.id.content);
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_contacts:
+                Intent intent=new Intent(getApplicationContext(),contacts.class);
+                startActivity(intent);
+                break;
+        }
         return true;
+
     }
 
 
@@ -126,7 +133,7 @@ contentView=findViewById(R.id.content);
         startActivity(intent);
     }
 
-    public void propery(View view) {
+    public void property(View view) {
         Intent intent = new Intent(Home.this, property.class);
         startActivity(intent);
     }

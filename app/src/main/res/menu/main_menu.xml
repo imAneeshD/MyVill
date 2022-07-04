@@ -11,27 +11,23 @@
         android:id="@+id/nav_contacts"
         android:title="CONTACTS"
         android:icon="@drawable/agenda"/>
+        <item
+            android:id="@+id/nav_msg"
+            android:title="MESSAGE"
+            android:icon="@drawable/agenda"/>
     </group>
 
-    <item android:title="PROFILE">
+        <group>
+        <item android:title="PROFILE"
+            android:id="@+id/profile"
+            android:icon="@drawable/user"
+            />
+            <item android:title="ABOUT US"
+                android:id="@+id/aboutus"
+                android:icon="@drawable/logo"
+                />
 
-    <menu>
-
-        <item
-            android:id="@+id/nav_login"
-            android:title="LOGIN"/>
-
-        <item
-            android:id="@+id/nav_logout"
-            android:title="LOGOUT" />
-
-
-    </menu>
-
-
-</item>
-
-
+    </group>
 
 
 

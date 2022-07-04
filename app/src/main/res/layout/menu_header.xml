@@ -17,7 +17,7 @@
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MyVill"
+        android:text="@string/myvill"
         android:fontFamily="@font/brandon_grotesque_black"
         android:textSize="24sp"
         android:layout_above="@id/menu_slogan"
