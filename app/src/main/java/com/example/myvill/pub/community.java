@@ -2,8 +2,10 @@ package com.example.myvill.pub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -24,6 +26,13 @@ public class community extends AppCompatActivity {
         web.setWebViewClient(new community.Callback());
         web.loadUrl("https://bsk.karnataka.gov.in/BSK/csLogin/loginPage#ourcommunity_id");
     }
+
+
+    public void back(View view) {
+        Intent intent=new Intent(community.this, Home.class);
+        startActivity(intent);
+    }
+
 
     private class Callback extends WebViewClient {
         @Override

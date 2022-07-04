@@ -36,7 +36,7 @@
             android:name=".pub.generalInfo"
             android:exported="false" />
         <activity
-            android:name=".pub.listView"
+            android:name=".pub.Home"
             android:exported="false" />
         <activity
             android:name=".pub.road"

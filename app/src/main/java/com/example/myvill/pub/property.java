@@ -2,8 +2,10 @@ package com.example.myvill.pub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -23,7 +25,10 @@ public class property extends AppCompatActivity {
         web.setWebViewClient(new property.Callback());
         web.loadUrl("http://e-swathu.kar.nic.in/(S(rwz222uxhjjmvw3rfshgetf3))/Issue0fForm9/Frm_PublicSearchForm9.aspx");
     }
-
+    public void back(View view) {
+        Intent intent=new Intent(property.this, Home.class);
+        startActivity(intent);
+    }
     private class Callback extends WebViewClient {
         @Override
         public boolean shouldOverrideKeyEvent(WebView view, KeyEvent event) {

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myvill.R;
-import com.example.myvill.pub.listView;
+import com.example.myvill.pub.Home;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -43,7 +43,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashScreen.this, listView.class);
+                Intent intent=new Intent(SplashScreen.this, Home.class);
                 startActivity(intent);
                 finish();
             }
