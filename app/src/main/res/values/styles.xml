@@ -4,6 +4,7 @@
 
 
         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -11,9 +12,12 @@
 
 
     <style name="navigationTheme">
+
     <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorSecondary">@color/colorSecondary</item>
     <item name="colorControlHighlight">@color/black</item>
 
     </style>
 
+    <color name="colorSecondary">#FAEA60</color>
 </resources>
