@@ -99,7 +99,7 @@ contentView=findViewById(R.id.content);
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_contacts:
-                Intent intent=new Intent(getApplicationContext(),list_contacts.class);
+                Intent intent=new Intent(getApplicationContext(),view_contacts.class);
                 startActivity(intent);
                 break;
         }

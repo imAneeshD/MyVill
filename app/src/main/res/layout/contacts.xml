@@ -85,14 +85,17 @@
 
         </LinearLayout>
 
-<ImageView
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:src="@drawable/call_ic"
-    android:layout_marginLeft="300dp"
-    android:orientation="horizontal"
-    android:layout_marginBottom=""
-    />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="300dp"
+                android:orientation="horizontal"
+                android:src="@drawable/call_ic" />
+        </RelativeLayout>
 
 
 
