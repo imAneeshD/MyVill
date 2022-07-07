@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 import com.example.myvill.R;
 import com.example.myvill.admin.add_contacts;
+import com.example.myvill.admin.login_admin;
 import com.google.android.material.navigation.NavigationView;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -147,7 +148,7 @@ contentView=findViewById(R.id.content);
     }
 
     public void add(View view) {
-        Intent intent=new Intent(Home.this, add_contacts.class);
+        Intent intent=new Intent(Home.this, login_admin.class);
         startActivity(intent);
     }
 }

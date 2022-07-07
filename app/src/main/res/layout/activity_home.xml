@@ -46,7 +46,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
+                android:layout_marginRight="19dp"
                 android:background="@color/banner_background"
                 android:onClick="add"
                 android:padding="5dp"

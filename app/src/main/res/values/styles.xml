@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge"
+>
 
 
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -10,14 +12,22 @@
     </style>
 
 
-
     <style name="navigationTheme">
 
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorControlHighlight">@color/black</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/black</item>
         <item name="colorControlActivated">@color/black</item>
 
     </style>
 
     <color name="colorSecondary">#FAEA60</color>
+
+    <style name="Widget.Theme.MyVill.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.MyVill.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
 </resources>
