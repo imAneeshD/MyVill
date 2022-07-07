@@ -1,56 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="90dp"
     android:background="@color/lightWhite"
-    tools:context=".pub.view_contacts"
     android:padding="4sp">
 
-    <RelativeLayout
-        android:id="@+id/head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
-
-        <ImageView
-            android:id="@+id/menu_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/menu_icon"
-           />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@color/banner_background"
-            android:padding="5dp"
-            android:src="@drawable/add_ic" />
-
-    </RelativeLayout>
-
 
 
     <RelativeLayout
-        android:id="@+id/recycleview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/head"
-        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="20sp"
-            android:layout_marginEnd="20sp"
-            android:layout_marginBottom="20sp"
-            android:src="@drawable/profile_image" />
+            android:layout_margin="20sp"
+            android:src="@drawable/profile_image"/>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +26,7 @@
             android:layout_toRightOf="@+id/image_view">
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/c_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@+id/share_layout"
@@ -68,20 +36,20 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/address"
+                android:id="@+id/c_address"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
+                android:layout_below="@+id/c_name"
                 android:fontFamily="@font/brandon_grotesque_black"
                 android:text="Address"
                 android:textSize="17sp"
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/number"
+                android:id="@+id/c_phone"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/address"
+                android:layout_below="@+id/c_address"
                 android:fontFamily="@font/brandon_grotesque_black"
                 android:text="Number"
                 android:textSize="17sp"

@@ -8,14 +8,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ComponentActivity;
 
 import com.example.myvill.R;
 import com.example.myvill.db.DBHelper;
-import com.example.myvill.pub.view_contacts;
+import com.example.myvill.pub.list_contacts;
 
 public class add_contacts extends AppCompatActivity {
-    EditText name, email, age;
+    EditText name, address, phone;
     Button insert, view, delete;
     DBHelper DB;
 
@@ -25,24 +24,29 @@ public class add_contacts extends AppCompatActivity {
         setContentView(R.layout.activity_add_contacts);
 
         name = findViewById(R.id.name);
-        email = findViewById(R.id.address);
-        age = findViewById(R.id.phone);
+        address = findViewById(R.id.address);
+        phone = findViewById(R.id.phone);
         insert = findViewById(R.id.btnInsert);
         view = findViewById(R.id.btnView);
         delete = findViewById(R.id.btnDelete);
 
         DB = new DBHelper(this);
 
-
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(add_contacts.this, list_contacts.class));
+            }
+        });
 
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String nameTXT = name.getText().toString();
-                String emailTXT = email.getText().toString();
-                String ageTXT = age.getText().toString();
+                String addressTXT = address.getText().toString();
+                String phoneTXT = phone.getText().toString();
 
-                Boolean checkinsertdata  = DB.insertuserdata(nameTXT, emailTXT, ageTXT);
+                Boolean checkinsertdata  = DB.insertuserdata(nameTXT, addressTXT, phoneTXT);
                 if(checkinsertdata==true)
                 {
                     Toast.makeText(add_contacts.this, "New Entry Inserted", Toast.LENGTH_SHORT).show();

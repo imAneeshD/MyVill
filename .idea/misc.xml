@@ -3,15 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyVill/app/src/main/res/layout-w1240dp/activity_admin_login.xml" value="0.197265625" />
+        <entry key="..\:/MyVill/app/src/main/res/layout-w936dp/activity_admin_login.xml" value="0.271875" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_add_contacts.xml" value="0.3138888888888889" />
+        <entry key="..\:/MyVill/app/src/main/res/layout/activity_admin_login.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_contacts.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_home.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_webview.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/contacts.xml" value="0.3625" />
+        <entry key="..\:/MyVill/app/src/main/res/layout/list_contact.xml" value="0.25" />
+        <entry key="..\:/MyVill/app/src/main/res/layout/list_contacts.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/menu_header.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/single_item.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/spalsh_screen.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/view_contact.xml" value="0.3229166666666667" />
+        <entry key="..\:/MyVill/app/src/main/res/layout/view_contacts.xml" value="0.3625" />
         <entry key="..\:/MyVill2/app/src/main/res/layout/activity_home.xml" value="0.3625" />
         <entry key="..\:/MyVill2/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
         <entry key="..\:/MyVill2/app/src/main/res/layout/list_item.xml" value="0.2965811965811966" />

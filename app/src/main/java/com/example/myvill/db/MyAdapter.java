@@ -15,27 +15,27 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private Context context;
-    private ArrayList name_id, email_id, age_id;
+    private ArrayList name_id, address_id, phone_id;
 
-    public MyAdapter(Context context, ArrayList name_id, ArrayList email_id, ArrayList age_id) {
+    public MyAdapter(Context context, ArrayList name_id, ArrayList address_id, ArrayList phone_id) {
         this.context = context;
         this.name_id = name_id;
-        this.email_id = email_id;
-        this.age_id = age_id;
+        this.address_id = address_id;
+        this.phone_id = phone_id;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.view_contact,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.view_contacts,parent,false);
         return new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.name_id.setText(String.valueOf(name_id.get(position)));
-        holder.email_id.setText(String.valueOf(email_id.get(position)));
-        holder.age_id.setText(String.valueOf(age_id.get(position)));
+        holder.address_id.setText(String.valueOf(address_id.get(position)));
+        holder.phone_id.setText(String.valueOf(phone_id.get(position)));
     }
 
     @Override
@@ -44,12 +44,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name_id, email_id, age_id;
+        TextView name_id, address_id, phone_id;
+
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            name_id = itemView.findViewById(R.id.name);
-            email_id = itemView.findViewById(R.id.address);
-            age_id = itemView.findViewById(R.id.phone);
+            name_id = itemView.findViewById(R.id.c_name);
+            address_id = itemView.findViewById(R.id.c_address);
+            phone_id = itemView.findViewById(R.id.c_phone);
         }
     }
 }

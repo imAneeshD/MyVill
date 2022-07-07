@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.myvill.R;
+import com.example.myvill.admin.add_contacts;
 import com.google.android.material.navigation.NavigationView;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -99,7 +100,7 @@ contentView=findViewById(R.id.content);
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_contacts:
-                Intent intent=new Intent(getApplicationContext(),view_contacts.class);
+                Intent intent=new Intent(getApplicationContext(), list_contacts.class);
                 startActivity(intent);
                 break;
         }
@@ -143,5 +144,10 @@ contentView=findViewById(R.id.content);
         Intent intent = new Intent(Home.this, road.class);
         startActivity(intent);
 
+    }
+
+    public void add(View view) {
+        Intent intent=new Intent(Home.this, add_contacts.class);
+        startActivity(intent);
     }
 }
