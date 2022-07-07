@@ -21,13 +21,13 @@ public class view_contacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_contact);
-        recyclerView = findViewById(R.id.recycleview);
-DB=new DBHelper(this);
-        name=new ArrayList<>();
-address=new ArrayList<>();
-phone=new ArrayList<>();
+       // recyclerView = findViewById(R.id.recycleview);
+        DB = new DBHelper(this);
+        name = new ArrayList<>();
+        address = new ArrayList<>();
+        phone = new ArrayList<>();
 
-recyclerView=findViewById(R.id.)
+        //recyclerView = findViewById(R.id.)
 
     }
 }

@@ -27,7 +27,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.userentry,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.view_contact,parent,false);
         return new MyViewHolder(v);
     }
 
@@ -47,9 +47,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         TextView name_id, email_id, age_id;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            name_id = itemView.findViewById(R.id.textname);
-            email_id = itemView.findViewById(R.id.textemail);
-            age_id = itemView.findViewById(R.id.textage);
+            name_id = itemView.findViewById(R.id.name);
+            email_id = itemView.findViewById(R.id.address);
+            age_id = itemView.findViewById(R.id.phone);
         }
     }
 }
