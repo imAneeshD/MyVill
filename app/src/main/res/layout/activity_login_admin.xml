@@ -19,7 +19,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/menu_icon"
+            android:onClick="back"
+            android:src="@drawable/backbutton"
             tools:ignore="InvalidId" />
 
 

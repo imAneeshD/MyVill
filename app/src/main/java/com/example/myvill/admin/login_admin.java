@@ -1,6 +1,7 @@
 package com.example.myvill.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,9 +21,6 @@ public class login_admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_admin);
 
-    }
-
-    public void callForgetPassword(View view) {
     }
 
 }
