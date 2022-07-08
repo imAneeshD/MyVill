@@ -12,13 +12,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "contacts.db", null, 1);
+        super(context, "mydatabase.db", null, 1);
 }
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
         DB.execSQL("create Table contacts(name TEXT primary key, address TEXT, phone TEXT)");
+        DB.execSQL("create Table admin(username TEXT primary key, password TEXT)");
+
     }
+
+
+
+
 
 
     @Override

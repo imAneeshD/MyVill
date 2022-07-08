@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,153 +9,64 @@
     android:transitionName="transition_login"
     tools:context=".admin.login_admin">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon"
+            tools:ignore="InvalidId" />
+
+
+    </RelativeLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
 
-        <ImageView
-            android:id="@+id/login_back_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="5dp"
-            android:src="@drawable/backbutton" />
-
         <TextView
-            android:id="@+id/logintxt"
+            android:id="@+id/login_text"
+            android:layout_width="200dp"
+            android:layout_height="90sp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:text="LOGIN"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_text"
+            android:hint="username" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:hint="@string/prompt_password" />
+
+        <Button
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:fontFamily="@font/brandon_grotesque_bold_italic"
-            android:text="Login"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="40sp" />
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp">
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/login_name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/logintxt"
-                android:hint="username"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_baseline_person_24"
-                app:startIconTint="@color/black"
-                tools:ignore="NotSibling">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/login_name_editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/brandon_grotesque_light"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    tools:ignore="DuplicateIds" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/login_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/login_name"
-                android:hint="password"
-                android:textColorHint="@color/black"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/pass"
-                app:startIconTint="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/login_password_editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/brandon_grotesque_light"
-                    android:inputType="textPassword"
-                    android:textColor="@color/black" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <RelativeLayout
-                android:id="@+id/forget_password_block"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/login_password"
-                android:layout_marginTop="10dp">
-
-
-                <CheckBox
-                    android:id="@+id/remember_me"
-                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:buttonTint="@color/black"
-                    android:text="remember_me"
-                    android:textColor="@color/black" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:background="#00000000"
-                    android:onClick="callForgetPassword"
-                    android:text="forget_password" />
-
-            </RelativeLayout>
-            <Button
-                android:id="@+id/letTheUserLogIn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/forget_password_block"
-                android:layout_marginTop="20dp"
-                android:background="@color/black"
-                android:onClick="login"
-                android:text="login"
-                android:textColor="@color/white" />
-
-
-            <RelativeLayout
-                android:id="@+id/login_progress_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@drawable/load"
-                android:elevation="8dp"
-                android:padding="20dp"
-                android:visibility="gone">
-
-
-                <ProgressBar
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true" />
-
-
-            </RelativeLayout>
-
-
-        </RelativeLayout>
-
-
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:onClick="login"
+            android:text="LOGIN" />
     </LinearLayout>
-</ScrollView>
+
+
+</RelativeLayout>
