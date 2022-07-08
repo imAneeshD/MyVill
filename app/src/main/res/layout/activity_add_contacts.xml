@@ -42,10 +42,10 @@
         android:id="@+id/btnInsert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Insert Data"
-        android:textSize="24dp"
         android:layout_below="@+id/phone"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Insert Data"
+        android:textSize="24dp" />
 
     <Button
         android:id="@+id/btnView"

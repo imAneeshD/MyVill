@@ -151,4 +151,9 @@ contentView=findViewById(R.id.content);
         Intent intent=new Intent(Home.this, login_admin.class);
         startActivity(intent);
     }
+
+//    public void trade(View view) {
+//        Intent intent=new Intent(Home.this, trade.class);
+//        startActivity(intent);
+//    }
 }

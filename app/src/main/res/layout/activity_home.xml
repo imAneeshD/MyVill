@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pub.Home"
+    tools:openDrawer="start"
     android:id="@+id/drawer_layout"
     >
 
@@ -31,8 +32,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:layout_height="70dp"
+            android:padding="20dp"
+            android:background="@color/colorSecondary">
 
             <ImageView
                 android:id="@+id/menu_icon"
@@ -47,7 +49,7 @@
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="19dp"
-                android:background="@color/banner_background"
+                android:background="@color/banner_background_light"
                 android:onClick="add"
                 android:padding="5dp"
                 android:src="@drawable/add_ic" />
@@ -144,6 +146,7 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="Services"
+                            android:textColor="@color/black"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -177,6 +180,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="News"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -209,6 +214,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="Community"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -251,6 +258,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="Status"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -283,6 +292,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="General Info"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -315,6 +326,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="Property Search"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -341,7 +354,9 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
-                            android:onClick="road">
+                            android:onClick="road"
+                            android:textColor="@color/black"
+>
 
                             <ImageView
                                 android:layout_width="50dp"
@@ -357,6 +372,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="road"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -373,6 +390,7 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
+
                             android:onClick="news">
 
                             <ImageView
@@ -380,6 +398,8 @@
                                 android:layout_height="50dp"
                                 android:layout_centerInParent="true"
                                 android:onClick="trade"
+                                android:textColor="@color/black"
+
                                 android:src="@drawable/transaction" />
 
                         </RelativeLayout>
@@ -390,6 +410,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="Trade Licence"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -422,6 +444,8 @@
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="NOC"
+                            android:textColor="@color/black"
+
                             android:textAlignment="center" />
 
                     </LinearLayout>

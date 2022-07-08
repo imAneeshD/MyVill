@@ -16,8 +16,11 @@
             android:id="@+id/image_view"
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:layout_margin="20sp"
-            android:src="@drawable/profile_image"/>
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:src="@drawable/profile_image" />
 
         <RelativeLayout
             android:layout_width="match_parent"
