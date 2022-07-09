@@ -1,17 +1,25 @@
 package com.example.myvill.pub;
 
+import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.RenderNode;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myvill.R;
+import com.example.myvill.admin.login_admin;
 import com.example.myvill.db.DBHelper;
 import com.example.myvill.db.MyAdapter;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -20,7 +28,11 @@ public class list_contacts extends AppCompatActivity {
     ArrayList<String> name, address, phone;
     DBHelper DB;
     MyAdapter adapter;
+    ImageView back,add;
 
+    LinearLayout contentView;
+
+    static final float END_SCALE = 0.7f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +44,36 @@ public class list_contacts extends AppCompatActivity {
         address = new ArrayList<>();
         phone = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerview);
+        contentView=findViewById(R.id.content);
+        add=findViewById(R.id.add);
 
+back=findViewById(R.id.back);
         adapter = new MyAdapter(this, name, address, phone);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         displaydata();
 
+add.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(list_contacts.this, login_admin.class);
+        startActivity(intent);
     }
+});
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(list_contacts.this,Home.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+
+
 
     private void displaydata() {
 
@@ -65,8 +99,5 @@ public class list_contacts extends AppCompatActivity {
 
     }
 
-    public void add(View view) {
 
-
-    }
 }

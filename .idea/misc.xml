@@ -59,8 +59,15 @@
         <entry key="..\:/MyVill_test/app/src/main/res/layout/view_contact.xml" value="0.3138888888888889" />
         <entry key="..\:/MyVill_test/app/src/main/res/menu/main_menu.xml" value="0.3155080213903743" />
         <entry key="..\:/MyVill_test/app/src/main/res/xml/network_security_config.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_add_contacts.xml" value="0.29444444444444445" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_home.xml" value="0.3569230769230769" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_list_view.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_login_admin.xml" value="0.5728395061728395" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_webview.xml" value="0.3625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/list.xml" value="0.3625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/list_contacts.xml" value="0.30833333333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/test.xml" value="0.3625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/view_contacts.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

@@ -14,13 +14,14 @@
         android:layout_marginTop="24dp"
         android:text="Please enter details"
         android:textSize="24dp" />
+
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
         android:layout_below="@+id/text"
-        android:hint="Name"/>
+        android:hint="Name"
+        android:textSize="24dp" />
 
     <EditText
         android:id="@+id/address"
@@ -34,9 +35,9 @@
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
         android:layout_below="@id/address"
-        android:hint="Phone"/>
+        android:hint="Phone"
+        android:textSize="24dp" />
 
     <Button
         android:id="@+id/btnInsert"

@@ -18,19 +18,19 @@
 
 
         <ImageView
-            android:id="@+id/menu_icon"
+            android:id="@+id/back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/menu_icon" />
+            android:src="@drawable/backbutton" />
 
         <ImageView
+            android:id="@+id/add"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@color/banner_background"
-            android:onClick="add"
             android:padding="5dp"
             android:src="@drawable/add_ic" />
 
