@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myvill.R;
 import com.example.myvill.db.DBHelper;
+import com.example.myvill.pub.Home;
 import com.example.myvill.pub.list_contacts;
 
 public class add_contacts extends AppCompatActivity {
@@ -79,5 +80,10 @@ public class add_contacts extends AppCompatActivity {
         });
 
 
+    }
+
+    public void back(View view) {
+        Intent intent=new Intent(add_contacts.this, Home.class);
+        startActivity(intent);
     }
 }

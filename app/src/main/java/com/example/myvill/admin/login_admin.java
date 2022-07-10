@@ -42,4 +42,18 @@ login.setOnClickListener(new View.OnClickListener() {
     }
 });
     }
+
+    public void back(View view) {
+        Intent intent=new Intent(login_admin.this,Home.class);
+        startActivity(intent);
+
+
+    }
+
+    public void login(View view) {
+        Intent intent=new Intent(login_admin.this,Home.class);
+        startActivity(intent);
+
+
+    }
 }
