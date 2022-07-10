@@ -73,6 +73,7 @@
                 <ImageView
                     android:layout_width="30sp"
                     android:layout_height="30sp"
+                    android:id="@+id/call"
                     android:src="@drawable/call_ic" />
 
 

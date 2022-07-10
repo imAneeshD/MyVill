@@ -3,6 +3,7 @@ package com.example.myvill.pub;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.RenderNode;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,7 +29,7 @@ public class list_contacts extends AppCompatActivity {
     ArrayList<String> name, address, phone;
     DBHelper DB;
     MyAdapter adapter;
-    ImageView back,add;
+    ImageView back,add,call;
 
     LinearLayout contentView;
 
@@ -46,6 +47,7 @@ public class list_contacts extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         contentView=findViewById(R.id.content);
         add=findViewById(R.id.add);
+        call=findViewById(R.id.call);
 
 back=findViewById(R.id.back);
         adapter = new MyAdapter(this, name, address, phone);
@@ -71,6 +73,9 @@ add.setOnClickListener(new View.OnClickListener() {
         });
 
 
+
+
+
     }
 
 
@@ -90,6 +95,16 @@ add.setOnClickListener(new View.OnClickListener() {
                 name.add(cursor.getString(0));
                 address.add(cursor.getString(1));
                 phone.add(cursor.getString(2));
+                call.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                       String number=phone.toString();
+                                Intent intent=new Intent(Intent.ACTION_DIAL);
+                                intent.setData(Uri.parse("tel:"+number));
+                                startActivity(intent);
+
+                    }
+                });
             }
         }
 
