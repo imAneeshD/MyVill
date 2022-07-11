@@ -19,6 +19,7 @@ import com.example.myvill.R;
 import com.example.myvill.admin.login_admin;
 import com.example.myvill.db.DBHelper;
 import com.example.myvill.db.MyAdapter;
+import com.example.myvill.db.PreCreateDB;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class list_contacts extends AppCompatActivity {
     ArrayList<String> name, address, phone;
     DBHelper DB;
     MyAdapter adapter;
-    ImageView back, add;
+    ImageView  add;
 
     LinearLayout contentView;
 
@@ -41,6 +42,7 @@ public class list_contacts extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         DB = new DBHelper(this);
         name = new ArrayList<>();
+        PreCreateDB.copyDB(this);
         address = new ArrayList<>();
         phone = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerview);

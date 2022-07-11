@@ -6,16 +6,17 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 
 
 public class DBHelper extends SQLiteOpenHelper {
+
 
     public DBHelper(Context context) {
         super(context, "myvill.db", null, 1);
@@ -27,28 +28,29 @@ public class DBHelper extends SQLiteOpenHelper {
         DB.execSQL("create Table admin(username TEXT primary key, password TEXT)");
     }
 
-    public static void copyDB(Context context){
-        try{
-            String destPath = "/data/data/"+ context.getPackageName()
+
+    public static void copyDB(Context context) {
+        try {
+            String destPath = "/data/data/" + context.getPackageName()
                     + "/databases";
             File f = new File(destPath);
-            if(!f.exists()){
+            if (!f.exists()) {
                 f.mkdir();
                 //copy the db from assets folder into the databases folder
                 rawCopy(context.getAssets().open("myvill.db"), new FileOutputStream(destPath + "/myvill.db"));
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void rawCopy(InputStream inputStream, OutputStream outputStream) throws IOException{
+    public static void rawCopy(InputStream inputStream, OutputStream outputStream) throws IOException {
         // copy 1k bytes at a time
         byte[] buffer = new byte[1024];
         int length;
-        while((length = inputStream.read(buffer)) > 0){
+        while ((length = inputStream.read(buffer)) > 0) {
             outputStream.write(buffer, 0, length);
         }
         inputStream.close();
@@ -56,11 +58,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-
-
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int ii) {
-       // DB.execSQL("drop Table if exists contacts");
+        // DB.execSQL("drop Table if exists contacts");
     }
 
     public Boolean insertuserdata(String name, String address, String phone) {
@@ -102,7 +102,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getNumber() {
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select number from contacts ",null);
+        Cursor cursor = DB.rawQuery("Select number from contacts ", null);
         return cursor;
 
     }
