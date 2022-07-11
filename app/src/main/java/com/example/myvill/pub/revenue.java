@@ -27,7 +27,11 @@ WebView web;
     }
 
     public void back(View view) {
+<<<<<<<< HEAD:app/src/main/java/com/example/myvill/pub/revenue.java
         Intent intent=new Intent(revenue.this, land.class);
+========
+        Intent intent=new Intent(services.this, land.class);
+>>>>>>>> 2c3872c (Commiting the Project):app/src/main/java/com/example/myvill/pub/services.java
         startActivity(intent);
     }
 
