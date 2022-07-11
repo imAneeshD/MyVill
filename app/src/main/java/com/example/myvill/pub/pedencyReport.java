@@ -12,7 +12,7 @@ import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
 
-public class community extends AppCompatActivity {
+public class pedencyReport extends AppCompatActivity {
     WebView web;
 
     @Override
@@ -23,13 +23,13 @@ public class community extends AppCompatActivity {
                 .web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new community.Callback());
-        web.loadUrl("https://bsk.karnataka.gov.in/BSK/csLogin/loginPage#ourcommunity_id");
+        web.setWebViewClient(new pedencyReport.Callback());
+        web.loadUrl("https://landrecords.karnataka.gov.in/service40/");
     }
 
 
     public void back(View view) {
-        Intent intent=new Intent(community.this, Home.class);
+        Intent intent=new Intent(pedencyReport.this, Home.class);
         startActivity(intent);
     }
 

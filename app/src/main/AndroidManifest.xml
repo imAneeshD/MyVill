@@ -35,7 +35,7 @@
             android:name=".pub.news"
             android:exported="false" />
         <activity
-            android:name=".pub.community"
+            android:name=".pub.pedencyReport"
             android:exported="false" />
         <activity
             android:name=".pub.property"

@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.myvill.R;
-import com.example.myvill.admin.add_contacts;
 import com.example.myvill.admin.login_admin;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,10 +22,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ImageView menu_icon;
-LinearLayout contentView;
+    LinearLayout contentView;
 
     static final float END_SCALE = 0.7f;
-
 
 
     @Override
@@ -39,10 +37,8 @@ LinearLayout contentView;
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
         menu_icon = findViewById(R.id.menu_icon);
-contentView=findViewById(R.id.content);
+        contentView = findViewById(R.id.content);
         navigationDrawer();     //Navigation Drawer
-
-
     }
 
 
@@ -87,22 +83,31 @@ contentView=findViewById(R.id.content);
                 contentView.setTranslationX(xTranslation);
             }
         });
-        
+
     }
 
     @Override
     public void onBackPressed() {
-        if(drawerLayout.isDrawerVisible(GravityCompat.START))
+        if (drawerLayout.isDrawerVisible(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START);
         else
             super.onBackPressed();
     }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_contacts:
-                Intent intent=new Intent(getApplicationContext(), list_contacts.class);
+                Intent intent = new Intent(getApplicationContext(), list_contacts.class);
                 startActivity(intent);
+                break;
+            case R.id.nav_news:
+                Intent intent2 = new Intent(getApplicationContext(), news.class);
+                startActivity(intent2);
+                break;
+            case R.id.nav_land:
+                Intent intent3 = new Intent(getApplicationContext(), property.class);
+                startActivity(intent3);
                 break;
         }
         return true;
@@ -131,7 +136,7 @@ contentView=findViewById(R.id.content);
     }
 
     public void community(View view) {
-        Intent intent = new Intent(Home.this, community.class);
+        Intent intent = new Intent(Home.this, pedencyReport.class);
         startActivity(intent);
     }
 
@@ -148,9 +153,10 @@ contentView=findViewById(R.id.content);
     }
 
     public void add(View view) {
-        Intent intent=new Intent(Home.this, login_admin.class);
+        Intent intent = new Intent(Home.this, login_admin.class);
         startActivity(intent);
     }
+
 
 //    public void trade(View view) {
 //        Intent intent=new Intent(Home.this, trade.class);

@@ -209,10 +209,10 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Community"
+                            android:text="Pedency Report"
                             android:textColor="@color/black"
 
                             android:textAlignment="center" />
@@ -451,7 +451,7 @@
 
 
                 </LinearLayout>
-                //cardView row1
+                //cardView row3
 
 
             </LinearLayout>

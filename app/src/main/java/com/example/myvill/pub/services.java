@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -21,8 +22,9 @@ WebView web;
         web=findViewById(R.id.web);
         WebSettings webSettings=web.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        web.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         web.setWebViewClient(new Callback());
-        web.loadUrl("https://bsk.karnataka.gov.in/BSK/cs/loadOnlineServicesBeforeLogin");
+        web.loadUrl("https://bsk.karnataka.gov.in/BSK/csLogin/loginPage");
     }
 
     public void back(View view) {
