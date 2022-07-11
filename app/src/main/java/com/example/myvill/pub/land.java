@@ -102,7 +102,7 @@ public class land extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent1);
                 break;
             case R.id.nav_services:
-                Intent intent2 = new Intent(getApplicationContext(), revenue.class);
+                Intent intent2 = new Intent(getApplicationContext(), mojini.class);
                 startActivity(intent2);
                 break;
             case R.id.nav_news:

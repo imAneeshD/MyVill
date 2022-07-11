@@ -26,11 +26,7 @@ public class SketchReport extends AppCompatActivity {
         web.loadUrl("https://bhoomojini.karnataka.gov.in/service18");
     }
     public void back(View view) {
-<<<<<<<< HEAD:app/src/main/java/com/example/myvill/pub/SketchReport.java
         Intent intent=new Intent(SketchReport.this, land.class);
-========
-        Intent intent=new Intent(generalInfo.this, land.class);
->>>>>>>> 2c3872c (Commiting the Project):app/src/main/java/com/example/myvill/pub/generalInfo.java
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

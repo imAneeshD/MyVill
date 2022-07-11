@@ -29,7 +29,7 @@ public class mojini extends AppCompatActivity {
         }
 
         public void back(View view) {
-            Intent intent=new Intent(mojini.this, land.class);
+            Intent intent=new Intent(mojini.this, list_contacts.class);
             startActivity(intent);
         }
 
