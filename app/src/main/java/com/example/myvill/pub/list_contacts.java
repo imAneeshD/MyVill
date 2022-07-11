@@ -22,7 +22,6 @@ import com.example.myvill.admin.login_admin;
 import com.example.myvill.db.DBHelper;
 import com.example.myvill.db.MyAdapter;
 import com.google.android.material.navigation.NavigationView;
-
 import java.util.ArrayList;
 
 public class list_contacts extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
