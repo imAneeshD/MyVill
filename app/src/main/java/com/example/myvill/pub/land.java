@@ -17,7 +17,7 @@ import com.example.myvill.R;
 import com.example.myvill.admin.login_admin;
 import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class land extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -31,7 +31,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_land);
 
         //Menu hooks
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -97,17 +97,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_contacts:
-                Intent intent = new Intent(getApplicationContext(), list_contacts.class);
-                startActivity(intent);
+            case R.id.nav_home:
+                Intent intent1 = new Intent(getApplicationContext(), list_contacts.class);
+                startActivity(intent1);
                 break;
-            case R.id.nav_news:
-                Intent intent2 = new Intent(getApplicationContext(), news.class);
+            case R.id.nav_services:
+                Intent intent2 = new Intent(getApplicationContext(), revenue.class);
                 startActivity(intent2);
                 break;
-            case R.id.nav_land:
-                Intent intent3 = new Intent(getApplicationContext(), property.class);
+            case R.id.nav_news:
+                Intent intent3 = new Intent(getApplicationContext(), news.class);
                 startActivity(intent3);
+                break;
+            case R.id.nav_land:
+                Intent intent4 = new Intent(getApplicationContext(), land.class);
+                startActivity(intent4);
                 break;
         }
         return true;
@@ -116,50 +120,50 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
     public void services(View view) {
-        Intent intent = new Intent(Home.this, services.class);
+        Intent intent = new Intent(land.this, revenue.class);
         startActivity(intent);
     }
 
     public void news(View view) {
-        Intent intent = new Intent(Home.this, news.class);
+        Intent intent = new Intent(land.this, news.class);
         startActivity(intent);
     }
 
     public void status(View view) {
-        Intent intent = new Intent(Home.this, status.class);
+        Intent intent = new Intent(land.this, status.class);
         startActivity(intent);
     }
 
     public void general_info(View view) {
-        Intent intent = new Intent(Home.this, generalInfo.class);
+        Intent intent = new Intent(land.this, SketchReport.class);
         startActivity(intent);
     }
 
     public void community(View view) {
-        Intent intent = new Intent(Home.this, pedencyReport.class);
+        Intent intent = new Intent(land.this, pedencyReport.class);
         startActivity(intent);
     }
 
     public void property(View view) {
-        Intent intent = new Intent(Home.this, property.class);
+        Intent intent = new Intent(land.this, property.class);
         startActivity(intent);
     }
 
 
     public void road(View view) {
-        Intent intent = new Intent(Home.this, road.class);
+        Intent intent = new Intent(land.this, road.class);
         startActivity(intent);
 
     }
 
     public void add(View view) {
-        Intent intent = new Intent(Home.this, login_admin.class);
+        Intent intent = new Intent(land.this, login_admin.class);
         startActivity(intent);
     }
 
 
 //    public void trade(View view) {
-//        Intent intent=new Intent(Home.this, trade.class);
+//        Intent intent=new Intent(land.this, trade.class);
 //        startActivity(intent);
 //    }
 }

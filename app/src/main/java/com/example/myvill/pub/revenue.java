@@ -12,27 +12,24 @@ import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
 
-public class pedencyReport extends AppCompatActivity {
-    WebView web;
-
+public class revenue extends AppCompatActivity {
+WebView web;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-        web = findViewById(R.id
-                .web);
-        WebSettings webSettings = web.getSettings();
+        web=findViewById(R.id.web);
+        WebSettings webSettings=web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new pedencyReport.Callback());
-        web.loadUrl("https://landrecords.karnataka.gov.in/service40/");
+        web.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        web.setWebViewClient(new Callback());
+        web.loadUrl("https://www.landrecords.karnataka.gov.in/service3/");
     }
-
 
     public void back(View view) {
-        Intent intent=new Intent(pedencyReport.this, land.class);
+        Intent intent=new Intent(revenue.this, land.class);
         startActivity(intent);
     }
-
 
     private class Callback extends WebViewClient {
         @Override

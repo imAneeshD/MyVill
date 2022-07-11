@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pub.services">
+    tools:context=".pub.revenue">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="411dp"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:background="@color/colorPrimary"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,9 +34,10 @@
     <WebView
         android:id="@+id/web"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="755dp"
         android:layout_below="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 

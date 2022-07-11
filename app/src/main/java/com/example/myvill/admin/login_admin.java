@@ -1,7 +1,6 @@
 package com.example.myvill.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.myvill.R;
-import com.example.myvill.pub.Home;
+import com.example.myvill.pub.land;
 
 public class login_admin extends AppCompatActivity {
     EditText username, password;
@@ -44,14 +43,14 @@ login.setOnClickListener(new View.OnClickListener() {
     }
 
     public void back(View view) {
-        Intent intent=new Intent(login_admin.this,Home.class);
+        Intent intent=new Intent(login_admin.this, land.class);
         startActivity(intent);
 
 
     }
 
     public void login(View view) {
-        Intent intent=new Intent(login_admin.this,Home.class);
+        Intent intent=new Intent(login_admin.this, land.class);
         startActivity(intent);
 
 

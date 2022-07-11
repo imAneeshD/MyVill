@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pub.Home"
+    tools:context=".pub.land"
     android:id="@+id/drawer_layout"
     >
 
@@ -31,26 +31,24 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:padding="20dp"
             android:background="@color/colorSecondary">
 
             <ImageView
                 android:id="@+id/menu_icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
+                android:layout_width="60dp"
+                android:layout_height="60sp"
                 android:src="@drawable/menu_icon"
                 tools:ignore="InvalidId" />
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="19dp"
                 android:background="@color/banner_background_light"
                 android:onClick="add"
-                android:padding="5dp"
                 android:src="@drawable/add_ic" />
 
         </RelativeLayout>
@@ -96,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="15dp"
-                            android:text="SAERCH" />
+                             />
 
                         <ImageView
                             android:layout_width="30dp"
@@ -105,6 +103,14 @@
                             android:layout_centerVertical="true"
                             android:layout_marginRight="15dp"
                             android:src="@drawable/search_ic" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:ems="10"
+                            android:hint="SEARCH"
+                            android:inputType="textPersonName" />
 
                     </RelativeLayout>
 
@@ -140,11 +146,11 @@
                         </RelativeLayout>
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="60dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Services"
+                            android:text="Revenue Map"
                             android:textColor="@color/black"
                             android:textAlignment="center" />
 
@@ -286,13 +292,12 @@
                         </RelativeLayout>
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="General Info"
+                            android:text="Sketch Report"
                             android:textColor="@color/black"
-
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -335,123 +340,7 @@
                 </LinearLayout>
                 //cardView row2
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <RelativeLayout
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/card1"
-                            android:elevation="8dp"
-                            android:onClick="road"
-                            android:textColor="@color/black"
->
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/roadmap" />
-
-                        </RelativeLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center_horizontal"
-                            android:text="road"
-                            android:textColor="@color/black"
-
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <RelativeLayout
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/card1"
-                            android:elevation="8dp"
-
-                            android:onClick="news">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerInParent="true"
-                                android:onClick="trade"
-                                android:textColor="@color/black"
-
-                                android:src="@drawable/transaction" />
-
-                        </RelativeLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center_horizontal"
-                            android:text="Trade Licence"
-                            android:textColor="@color/black"
-
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <RelativeLayout
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/card1"
-                            android:elevation="8dp"
-                            android:onClick="community">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/noc" />
-
-                        </RelativeLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center_horizontal"
-                            android:text="NOC"
-                            android:textColor="@color/black"
-
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-                //cardView row3
 
 
             </LinearLayout>

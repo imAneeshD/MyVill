@@ -20,13 +20,12 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase DB) {
         DB.execSQL("create Table contacts(name TEXT primary key, address TEXT, phone TEXT)");
         DB.execSQL("create Table admin(username TEXT primary key, password TEXT)");
-
     }
 
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int ii) {
-        DB.execSQL("drop Table if exists contacts");
+       // DB.execSQL("drop Table if exists contacts");
     }
 
     public Boolean insertuserdata(String name, String address, String phone) {
@@ -42,6 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+
 
     public Cursor getdata() {
         SQLiteDatabase DB = this.getWritableDatabase();

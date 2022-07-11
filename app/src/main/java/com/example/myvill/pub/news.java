@@ -26,7 +26,7 @@ public class news extends AppCompatActivity {
         web.loadUrl("https://bsk.karnataka.gov.in/BSK/csLogin/loginPage#news_id");
     }
     public void back(View view) {
-        Intent intent=new Intent(news.this, Home.class);
+        Intent intent=new Intent(news.this, land.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

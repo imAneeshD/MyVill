@@ -12,7 +12,7 @@ import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
 
-public class generalInfo extends AppCompatActivity {
+public class SketchReport extends AppCompatActivity {
     WebView web;
 
     @Override
@@ -22,11 +22,11 @@ public class generalInfo extends AppCompatActivity {
         web = findViewById(R.id.web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new generalInfo.Callback());
-        web.loadUrl("https://panchatantra.kar.nic.in/panchamitra/MainMenu.aspx?gp=1511004003&gpname=%E0%B2%95%E0%B2%AC%E0%B2%95");
+        web.setWebViewClient(new SketchReport.Callback());
+        web.loadUrl("https://bhoomojini.karnataka.gov.in/service18");
     }
     public void back(View view) {
-        Intent intent=new Intent(generalInfo.this, Home.class);
+        Intent intent=new Intent(SketchReport.this, land.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

@@ -22,10 +22,10 @@ WebView web;
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         web.setWebViewClient(new status.Callback());
-        web.loadUrl("https://bsk.karnataka.gov.in/BSK/csLogin/loginPage");
+        web.loadUrl("https://bhoomojini.karnataka.gov.in/service19/report/Applicationdetails");
     }
     public void back(View view) {
-        Intent intent=new Intent(status.this, Home.class);
+        Intent intent=new Intent(status.this, land.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

@@ -76,7 +76,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_height="30dp"
                     android:id="@+id/call"
                     android:src="@drawable/call" />
 

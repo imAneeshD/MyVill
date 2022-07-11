@@ -26,7 +26,7 @@ public class property extends AppCompatActivity {
         web.loadUrl("https://bhoomojini.karnataka.gov.in/index.html");
     }
     public void back(View view) {
-        Intent intent=new Intent(property.this, Home.class);
+        Intent intent=new Intent(property.this, land.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

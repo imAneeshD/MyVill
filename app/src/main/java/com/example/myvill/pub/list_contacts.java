@@ -2,10 +2,10 @@ package com.example.myvill.pub;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -21,6 +21,7 @@ import com.example.myvill.R;
 import com.example.myvill.admin.login_admin;
 import com.example.myvill.db.DBHelper;
 import com.example.myvill.db.MyAdapter;
+import com.example.myvill.db.PreCreateDB;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_contacts);
+        PreCreateDB.copyDB(this);
         recyclerView = findViewById(R.id.recyclerview);
         DB = new DBHelper(this);
         name = new ArrayList<>();
@@ -68,12 +70,13 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
             }
         });
+
     }
 
     private void navigationDrawer() {
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_contacts);
+        navigationView.setCheckedItem(R.id.nav_home);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,8 +142,20 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intent = new Intent(getApplicationContext(), Home.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(getApplicationContext(), list_contacts.class);
+                startActivity(intent1);
+                break;
+            case R.id.nav_services:
+                Intent intent2 = new Intent(getApplicationContext(), mojini.class);
+                startActivity(intent2);
+                break;
+            case R.id.nav_news:
+                Intent intent3 = new Intent(getApplicationContext(), news.class);
+                startActivity(intent3);
+                break;
+            case R.id.nav_land:
+                Intent intent4 = new Intent(getApplicationContext(), land.class);
+                startActivity(intent4);
                 break;
         }
         return true;

@@ -25,7 +25,7 @@ public class road extends AppCompatActivity {
         web.loadUrl("https://bsk.karnataka.gov.in/BSK/cs/loadOnlineServicesBeforeLogin");
     }
     public void back(View view) {
-        Intent intent=new Intent(road.this, Home.class);
+        Intent intent=new Intent(road.this, land.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

@@ -21,7 +21,9 @@
         <activity
             android:name=".admin.login_admin"
             android:exported="false" />
-
+        <activity
+            android:name=".pub.mojini"
+            android:exported="false" />
         <activity
             android:name=".admin.add_contacts"
             android:exported="false" />
@@ -41,13 +43,13 @@
             android:name=".pub.property"
             android:exported="false" />
         <activity
-            android:name=".pub.services"
+            android:name=".pub.revenue"
             android:exported="false" />
         <activity
-            android:name=".pub.generalInfo"
+            android:name=".pub.SketchReport"
             android:exported="false" />
         <activity
-            android:name=".pub.Home"
+            android:name=".pub.land"
             android:exported="false" />
         <activity
             android:name=".pub.road"

@@ -31,58 +31,81 @@
         tools:ignore="ExtraText">
 
         <RelativeLayout
-            android:id="@+id/head"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="55dp"
             android:padding="20dp"
             android:background="@color/colorSecondary">
 
             <ImageView
                 android:id="@+id/menu_icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="80sp"
                 android:src="@drawable/menu_icon"
                 tools:ignore="InvalidId" />
 
             <ImageView
-                android:id="@+id/add"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="19dp"
                 android:background="@color/banner_background_light"
-                android:onClick="add"
-                android:padding="5dp"
+                android:id="@+id/add"
                 android:src="@drawable/add_ic" />
 
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="vertical"
-            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:elevation="10dp">
 
-            >
             <TextView
-                android:id="@+id/text_call"
-                android:layout_width="180dp"
-                android:layout_height="60sp"
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/brandon_grotesque_black"
                 android:text="Contacts"
-                android:layout_marginLeft="110dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="40dp"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="170dp"
-                android:layout_below="@+id/text_call"
-                android:layout_toRightOf="@+id/text_call"
-                android:src="@drawable/call_logo" />
-        </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/app_name"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:elevation="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/search_ic" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="SEARCH"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
 
