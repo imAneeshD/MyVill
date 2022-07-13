@@ -27,36 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
         DB.execSQL("create Table contacts(name TEXT primary key, address TEXT, phone TEXT)");
         DB.execSQL("create Table admin(username TEXT primary key, password TEXT)");
     }
-
-
-    public static void copyDB(Context context) {
-        try {
-            String destPath = "/data/data/" + context.getPackageName()
-                    + "/databases";
-            File f = new File(destPath);
-            if (!f.exists()) {
-                f.mkdir();
-                //copy the db from assets folder into the databases folder
-                rawCopy(context.getAssets().open("myvill.db"), new FileOutputStream(destPath + "/myvill.db"));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void rawCopy(InputStream inputStream, OutputStream outputStream) throws IOException {
-        // copy 1k bytes at a time
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = inputStream.read(buffer)) > 0) {
-            outputStream.write(buffer, 0, length);
-        }
-        inputStream.close();
-        outputStream.close();
-    }
-
+    
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int ii) {

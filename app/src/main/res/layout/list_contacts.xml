@@ -77,7 +77,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="20dp"
-                android:background="@color/white"
+                android:background="@color/lightWhite"
                 android:elevation="8dp">
 
                 <TextView
@@ -101,6 +101,7 @@
                     android:layout_height="match_parent"
                     android:ems="10"
                     android:hint="SEARCH"
+                    android:textColor="@color/black"
                     android:inputType="textPersonName" />
 
             </RelativeLayout>
