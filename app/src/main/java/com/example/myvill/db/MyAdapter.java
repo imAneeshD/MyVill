@@ -14,7 +14,7 @@ import com.example.myvill.R;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> implements View.OnClickListener {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
     private Context context;
     private ArrayList name_id, address_id, phone_id;
 
@@ -37,7 +37,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         holder.name_id.setText(String.valueOf(name_id.get(position)));
         holder.address_id.setText(String.valueOf(address_id.get(position)));
         holder.phone_id.setText(String.valueOf(phone_id.get(position)));
-        holder.call.setOnClickListener(this);
     }
 
 
