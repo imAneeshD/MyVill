@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,6 +38,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
         holder.name_id.setText(String.valueOf(name_id.get(position)));
         holder.address_id.setText(String.valueOf(address_id.get(position)));
         holder.phone_id.setText(String.valueOf(phone_id.get(position)));
+        holder.call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,""+phone_id,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

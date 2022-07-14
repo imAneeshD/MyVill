@@ -22,6 +22,7 @@ import com.example.myvill.admin.login_admin;
 import com.example.myvill.db.DBHelper;
 import com.example.myvill.db.MyAdapter;
 import com.google.android.material.navigation.NavigationView;
+
 import java.util.ArrayList;
 
 public class list_contacts extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -61,12 +62,6 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
         navigationDrawer();     //Navigation Drawer
 
 
-
-
-
-
-
-
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,16 +70,6 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
             }
         });
     }
-
-
-
-
-
-
-
-
-
-
 
 
     private void navigationDrawer() {
@@ -103,8 +88,6 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
         });
         animateNavigationDrawer();
     }
-
-
 
 
     private void animateNavigationDrawer() {
@@ -145,21 +128,12 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
                 name.add(cursor.getString(0));
                 address.add(cursor.getString(1));
                 phone.add(cursor.getString(2));
-//                call.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        String num = cursor.getString(2);
-//                        Intent intent=new Intent(Intent.ACTION_DIAL);
-//                        intent.setData(Uri.parse("num:"+num));
-//                        startActivity(intent);
-//                    }
-//                });
+
             }
 
         }
 
     }
-
 
 
     @Override
