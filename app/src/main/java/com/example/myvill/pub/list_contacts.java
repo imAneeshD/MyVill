@@ -2,6 +2,7 @@ package com.example.myvill.pub;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +38,7 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
 
     static final float END_SCALE = 0.7f;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +57,15 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
         adapter = new MyAdapter(this, name, address, phone);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        call = findViewById(R.id.call);
         displaydata();
         navigationDrawer();     //Navigation Drawer
+
+
+
+
+
+
+
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +75,17 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
             }
         });
     }
+
+
+
+
+
+
+
+
+
+
+
 
     private void navigationDrawer() {
         navigationView.bringToFront();
@@ -84,6 +103,8 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
         });
         animateNavigationDrawer();
     }
+
+
 
 
     private void animateNavigationDrawer() {
@@ -124,7 +145,15 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
                 name.add(cursor.getString(0));
                 address.add(cursor.getString(1));
                 phone.add(cursor.getString(2));
-
+//                call.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        String num = cursor.getString(2);
+//                        Intent intent=new Intent(Intent.ACTION_DIAL);
+//                        intent.setData(Uri.parse("num:"+num));
+//                        startActivity(intent);
+//                    }
+//                });
             }
 
         }
