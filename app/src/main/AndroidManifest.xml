@@ -52,7 +52,7 @@
             android:name=".pub.land"
             android:exported="false" />
         <activity
-            android:name=".pub.road"
+            android:name=".pub.circular"
             android:exported="false" />
         <activity
             android:name=".common.SplashScreen"

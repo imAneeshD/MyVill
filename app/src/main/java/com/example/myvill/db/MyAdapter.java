@@ -1,6 +1,8 @@
 package com.example.myvill.db;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,13 +11,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myvill.R;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>   {
     private Context context;
     private ArrayList name_id, address_id, phone_id;
 
@@ -38,10 +41,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
         holder.name_id.setText(String.valueOf(name_id.get(position)));
         holder.address_id.setText(String.valueOf(address_id.get(position)));
         holder.phone_id.setText(String.valueOf(phone_id.get(position)));
+//        holder.call.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context,""+phone_id.get(position),Toast.LENGTH_SHORT).show();
+//            }
+//        });
         holder.call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,""+phone_id.get(position),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + phone_id.get(position)));
+                context.startActivity(intent);
             }
         });
     }
@@ -51,9 +62,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
     public int getItemCount() {
         return name_id.size();
     }
-
-
-
 
 
 
