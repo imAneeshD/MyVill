@@ -3,10 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MyVill - Editing/app/src/main/res/layout/activity_add_contacts.xml" value="0.30277777777777776" />
         <entry key="..\:/MyVill/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1485" />
         <entry key="..\:/MyVill/app/src/main/res/drawable/add_ic.xml" value="0.1485" />
-        <entry key="..\:/MyVill/app/src/main/res/drawable/call.xml" value="0.1935" />
         <entry key="..\:/MyVill/app/src/main/res/drawable/card1.xml" value="0.1485" />
         <entry key="..\:/MyVill/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
         <entry key="..\:/MyVill/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
@@ -23,12 +21,11 @@
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_admin_login2.xml" value="0.3484375" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_contacts.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_home.xml" value="0.3625" />
-        <entry key="..\:/MyVill/app/src/main/res/layout/activity_land.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_login_admin.xml" value="0.33" />
         <entry key="..\:/MyVill/app/src/main/res/layout/activity_webview.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/contacts.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/list_contact.xml" value="0.25" />
-        <entry key="..\:/MyVill/app/src/main/res/layout/list_contacts.xml" value="0.3452685421994885" />
+        <entry key="..\:/MyVill/app/src/main/res/layout/list_contacts.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/menu_header.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/single_item.xml" value="0.3625" />
         <entry key="..\:/MyVill/app/src/main/res/layout/spalsh_screen.xml" value="0.3625" />
@@ -42,16 +39,6 @@
         <entry key="..\:/MyVill2/app/src/main/res/layout/list_item.xml" value="0.2965811965811966" />
         <entry key="..\:/MyVill2/app/src/main/res/layout/list_view.xml" value="0.3625" />
         <entry key="..\:/MyVill2/app/src/main/res/layout/spalsh_screen.xml" value="0.13846153846153847" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/activity_add_contacts.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/activity_home.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/activity_land.xml" value="0.20300751879699247" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/activity_login_admin.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/activity_webview.xml" value="0.25" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/list_contacts.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/menu_header.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/spalsh_screen.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/layout/view_contacts.xml" value="0.3625" />
-        <entry key="..\:/MyVill_editing/app/src/main/res/menu/main_menu.xml" value="0.3625" />
         <entry key="..\:/MyVill_test/app/src/main/res/drawable/card1.xml" value="0.1" />
         <entry key="..\:/MyVill_test/app/src/main/res/drawable/search.xml" value="0.1935" />
         <entry key="..\:/MyVill_test/app/src/main/res/layout/activity_contacts.xml" value="0.2768361581920904" />
@@ -74,13 +61,14 @@
         <entry key="..\:/MyVill_test/app/src/main/res/xml/network_security_config.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_add_contacts.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_home.xml" value="0.3569230769230769" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_land.xml" value="0.2601851851851852" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_list_view.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_login_admin.xml" value="0.5728395061728395" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_login_admin.xml" value="0.34587813620071683" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/activity_webview.xml" value="0.3625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/list.xml" value="0.3625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/list_contacts.xml" value="0.30833333333333335" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/test.xml" value="0.3625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/view_contacts.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyVill/app/src/main/res/layout/view_contacts.xml" value="0.25" />
       </map>
     </option>
   </component>
