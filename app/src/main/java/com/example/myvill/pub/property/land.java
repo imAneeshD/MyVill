@@ -47,7 +47,7 @@ public class land extends AppCompatActivity implements NavigationView.OnNavigati
     private void navigationDrawer() {
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.nav_land);
 
         menu_icon.setOnClickListener(new View.OnClickListener() {
             @Override
