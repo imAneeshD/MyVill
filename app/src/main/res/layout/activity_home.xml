@@ -146,13 +146,13 @@
                         </RelativeLayout>
 
                         <TextView
-                            android:layout_width="60dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="School"
-                            android:textColor="@color/black"
-                            android:textAlignment="center" />
+                            android:text="Education"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
 
                     </LinearLayout>
 
@@ -184,7 +184,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Hospital"
+                            android:text="Health Care"
                             android:textColor="@color/black"
 
                             android:textAlignment="center" />
@@ -258,14 +258,14 @@
                         </RelativeLayout>
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="78dp"
+                            android:layout_height="38dp"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
                             android:text="Government Office"
-                            android:textColor="@color/black"
+                            android:textAlignment="center"
 
-                            android:textAlignment="center" />
+                            android:textColor="@color/black" />
 
                     </LinearLayout>
 
@@ -296,7 +296,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Sketch Report"
+                            android:text="Temple"
                             android:textColor="@color/black"
                             android:textAlignment="center" />
 
@@ -325,11 +325,11 @@
                         </RelativeLayout>
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Property Search"
+                            android:text="Police Station"
                             android:textColor="@color/black"
 
                             android:textAlignment="center" />
@@ -339,6 +339,7 @@
 
                 </LinearLayout>
                 //cardView row2
+
 
 
 
