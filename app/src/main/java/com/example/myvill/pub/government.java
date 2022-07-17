@@ -160,7 +160,7 @@ public class government extends AppCompatActivity implements NavigationView.OnNa
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intent1 = new Intent(getApplicationContext(), education.class);
+                Intent intent1 = new Intent(getApplicationContext(), Home.class);
                 startActivity(intent1);
                 break;
             case R.id.nav_services:

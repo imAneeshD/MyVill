@@ -160,7 +160,7 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intent1 = new Intent(getApplicationContext(), education.class);
+                Intent intent1 = new Intent(getApplicationContext(), Home.class);
                 startActivity(intent1);
                 break;
             case R.id.nav_services:
