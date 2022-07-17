@@ -19,6 +19,9 @@
         android:theme="@style/Theme.MyVill"
         tools:targetApi="31">
         <activity
+            android:name=".pub.Home"
+            android:exported="false" />
+        <activity
             android:name=".admin.login_admin"
             android:exported="false" />
         <activity

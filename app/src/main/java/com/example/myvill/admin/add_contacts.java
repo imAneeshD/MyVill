@@ -23,7 +23,6 @@ public class add_contacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contacts);
-
         name = findViewById(R.id.name);
         address = findViewById(R.id.address);
         phone = findViewById(R.id.phone);
