@@ -22,40 +22,43 @@
             android:name=".pub.Home"
             android:exported="false" />
         <activity
-            android:name=".admin.login_admin"
+            android:name=".pub.property.mojini"
             android:exported="false" />
         <activity
-            android:name=".pub.mojini"
+            android:name=".pub.education"
             android:exported="false" />
         <activity
-            android:name=".admin.add_contacts"
-            android:exported="false" />
-        <activity
-            android:name=".pub.list_contacts"
-            android:exported="false" />
-        <activity
-            android:name=".pub.status"
+            android:name=".pub.property.status"
             android:exported="false" />
         <activity
             android:name=".pub.news"
             android:exported="false" />
         <activity
-            android:name=".pub.pedencyReport"
+            android:name=".pub.property.pedencyReport"
             android:exported="false" />
         <activity
-            android:name=".pub.property"
+            android:name=".pub.property.property"
             android:exported="false" />
         <activity
-            android:name=".pub.revenue"
+            android:name=".pub.property.revenue"
             android:exported="false" />
         <activity
-            android:name=".pub.SketchReport"
+            android:name=".pub.property.SketchReport"
             android:exported="false" />
         <activity
-            android:name=".pub.land"
+            android:name=".pub.property.land"
             android:exported="false" />
         <activity
-            android:name=".pub.circular"
+            android:name=".pub.property.circular"
+            android:exported="false" />
+        <activity
+            android:name=".pub.generalshops"
+            android:exported="false" />
+        <activity
+            android:name=".pub.healthcare"
+            android:exported="false" />
+        <activity
+            android:name=".pub.government"
             android:exported="false" />
         <activity
             android:name=".common.SplashScreen"
@@ -66,7 +69,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".db.MyAdapter" />
     </application>
 
 </manifest>

@@ -1,14 +1,12 @@
 package com.example.myvill.pub;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,24 +16,34 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myvill.R;
-import com.example.myvill.admin.login_admin;
-import com.example.myvill.db.DBHelper;
-import com.example.myvill.db.MyAdapter;
+import com.example.myvill.adapter.CustomAdapter;
+import com.example.myvill.pub.property.land;
+import com.example.myvill.pub.property.mojini;
 import com.google.android.material.navigation.NavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
-public class list_contacts extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class healthcare extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
     RecyclerView recyclerView;
-    ArrayList<String> name;
-    ArrayList<String> address;
-    ArrayList<String> phone;
-    DBHelper DB;
-    MyAdapter adapter;
-    ImageView menu, add, call;
+
+    ArrayList<String> name = new ArrayList<>();
+    ArrayList<String> address = new ArrayList<>();
+    ArrayList<String> phone = new ArrayList<>();
+
+
+    //Navigation
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     LinearLayout contentView;
+    ImageView menu;
 
     static final float END_SCALE = 0.7f;
 
@@ -44,31 +52,59 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_contacts);
+
+        Adapter adapter;
+
+
         recyclerView = findViewById(R.id.recyclerview);
-        DB = new DBHelper(this);
-        name = new ArrayList<>();
-        address = new ArrayList<>();
-        phone = new ArrayList<>();
-        recyclerView = findViewById(R.id.recyclerview);
+        menu = findViewById(R.id.menu_icon);
+
+
+        //navigation
         contentView = findViewById(R.id.content);
-        add = findViewById(R.id.add);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
-        menu = findViewById(R.id.menu_icon);
-        adapter = new MyAdapter(this, name, address, phone);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        displaydata();
         navigationDrawer();     //Navigation Drawer
 
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(list_contacts.this, login_admin.class);
-                startActivity(intent);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        try {
+            JSONObject obj = new JSONObject(loadJSONfromAssets());
+
+            JSONArray array = obj.getJSONArray("healthcare");
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject details = array.getJSONObject(i);
+                name.add(details.getString("name"));
+                address.add(details.getString("address"));
+                phone.add(details.getString("phone"));
             }
-        });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        CustomAdapter customAdapter = new CustomAdapter(name,address,phone, healthcare.this);
+        recyclerView.setAdapter(customAdapter);
+
+
+    }
+
+    private String loadJSONfromAssets() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("contacts.json");
+            int size = is.available();
+
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            json = new String(buffer, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
 
@@ -118,29 +154,13 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
     }
 
 
-    public void displaydata() {
-        Cursor cursor = DB.getdata();
-        if (cursor.getCount() == 0) {
-            Toast.makeText(list_contacts.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
-            return;
-        } else {
-            while (cursor.moveToNext()) {
-                name.add(cursor.getString(0));
-                address.add(cursor.getString(1));
-                phone.add(cursor.getString(2));
-
-            }
-
-        }
-
-    }
 
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intent1 = new Intent(getApplicationContext(), list_contacts.class);
+                Intent intent1 = new Intent(getApplicationContext(), education.class);
                 startActivity(intent1);
                 break;
             case R.id.nav_services:
@@ -160,7 +180,7 @@ public class list_contacts extends AppCompatActivity implements NavigationView.O
     }
 
 //    public void add(String view) {
-//        Intent intent = new Intent(list_contacts.this, login_admin.class);
+//        Intent intent = new Intent(education.this, login_admin.class);
 //        startActivity(intent);
 //    }
 }

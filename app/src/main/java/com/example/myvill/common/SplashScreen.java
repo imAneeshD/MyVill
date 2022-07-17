@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.example.myvill.R;
 import com.example.myvill.pub.Home;
-import com.example.myvill.pub.list_contacts;
 
 public class SplashScreen extends AppCompatActivity {
 

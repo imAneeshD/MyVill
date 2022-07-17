@@ -1,4 +1,4 @@
-package com.example.myvill.pub;
+package com.example.myvill.pub.property;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,28 +12,23 @@ import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
 
-public class pedencyReport extends AppCompatActivity {
+public class SketchReport extends AppCompatActivity {
     WebView web;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-        web = findViewById(R.id
-                .web);
+        web = findViewById(R.id.web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new pedencyReport.Callback());
-        web.loadUrl("https://landrecords.karnataka.gov.in/service40/");
+        web.setWebViewClient(new SketchReport.Callback());
+        web.loadUrl("https://bhoomojini.karnataka.gov.in/service18");
     }
-
-
     public void back(View view) {
-        Intent intent=new Intent(pedencyReport.this, land.class);
+        Intent intent=new Intent(SketchReport.this, land.class);
         startActivity(intent);
     }
-
-
     private class Callback extends WebViewClient {
         @Override
         public boolean shouldOverrideKeyEvent(WebView view, KeyEvent event) {

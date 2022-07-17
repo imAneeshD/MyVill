@@ -1,0 +1,91 @@
+{
+  "education": [
+    {
+      "name": "edu 1",
+      "address": "address 1",
+      "phone": "987654321"
+    },
+    {
+      "name": "edu 2",
+      "address": "address 2",
+      "phone": "987654321"
+    },
+    {
+      "name": "edu 3",
+      "address": "address 3",
+      "phone": "987654321"
+    },
+    {
+      "name": "edu 4",
+      "address": "address 4",
+      "phone": "987654321"
+    }
+  ],
+  "healthcare": [
+    {
+      "name": "med 1",
+      "address": "address 1",
+      "phone": "987654321"
+    },
+    {
+      "name": "med 2",
+      "address": "address 2",
+      "phone": "987654321"
+    },
+    {
+      "name": "med 3",
+      "address": "address 3",
+      "phone": "987654321"
+    },
+    {
+      "name": "med 4",
+      "address": "address 4",
+      "phone": "987654321"
+    }
+  ],
+  "general": [
+    {
+      "name": "gen 1",
+      "address": "address 1",
+      "phone": "987654321"
+    },
+    {
+      "name": "gen 2",
+      "address": "address 2",
+      "phone": "987654321"
+    },
+    {
+      "name": "gen 3",
+      "address": "address 3",
+      "phone": "987654321"
+    },
+    {
+      "name": "gen 4",
+      "address": "address 4",
+      "phone": "987654321"
+    }
+  ],
+  "government": [
+    {
+      "name": "gov 1",
+      "address": "address 1",
+      "phone": "987654321"
+    },
+    {
+      "name": "gov 2",
+      "address": "address 2",
+      "phone": "987654321"
+    },
+    {
+      "name": "gov 3",
+      "address": "address 3",
+      "phone": "987654321"
+    },
+    {
+      "name": "gov 4",
+      "address": "address 4",
+      "phone": "987654321"
+    }
+  ]
+}
+

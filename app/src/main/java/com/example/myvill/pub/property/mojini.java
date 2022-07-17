@@ -1,4 +1,4 @@
-package com.example.myvill.pub;
+package com.example.myvill.pub.property;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myvill.R;
+import com.example.myvill.pub.Home;
+import com.example.myvill.pub.education;
 
 public class mojini extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class mojini extends AppCompatActivity {
         }
 
         public void back(View view) {
-            Intent intent=new Intent(mojini.this, list_contacts.class);
+            Intent intent=new Intent(mojini.this, Home.class);
             startActivity(intent);
         }
 

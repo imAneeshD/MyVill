@@ -135,7 +135,7 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
-                            android:onClick="services">
+                            android:onClick="education">
 
                             <ImageView
                                 android:layout_width="50dp"
@@ -168,13 +168,12 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
-                            android:onClick="news">
+                            android:onClick="healthcare">
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_centerHorizontal="true"
-                                android:onClick="news"
                                 android:src="@drawable/news" />
 
                         </RelativeLayout>
@@ -203,7 +202,7 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
-                            android:onClick="community">
+                            android:onClick="generalshops">
 
                             <ImageView
                                 android:layout_width="40dp"
@@ -247,7 +246,7 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
-                            android:onClick="status">
+                            android:onClick="government">
 
                             <ImageView
                                 android:layout_width="50dp"

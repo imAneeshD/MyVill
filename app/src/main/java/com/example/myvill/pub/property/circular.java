@@ -1,4 +1,5 @@
-package com.example.myvill.pub;
+package com.example.myvill.pub.property;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,8 +13,9 @@ import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
 
-public class status extends AppCompatActivity {
-WebView web;
+public class circular extends AppCompatActivity {
+    WebView web;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +23,11 @@ WebView web;
         web = findViewById(R.id.web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.setWebViewClient(new status.Callback());
-        web.loadUrl("https://bhoomojini.karnataka.gov.in/service19/report/Applicationdetails");
+        web.setWebViewClient(new circular.Callback());
+        web.loadUrl("https://bhoomojini.karnataka.gov.in/mojini/mojinicirculars");
     }
     public void back(View view) {
-        Intent intent=new Intent(status.this, land.class);
+        Intent intent=new Intent(circular.this, land.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

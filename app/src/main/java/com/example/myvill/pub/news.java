@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.example.myvill.R;
+import com.example.myvill.pub.property.land;
 
 public class news extends AppCompatActivity {
     WebView web;
@@ -26,7 +27,7 @@ public class news extends AppCompatActivity {
         web.loadUrl("https://bsk.karnataka.gov.in/BSK/csLogin/loginPage#news_id");
     }
     public void back(View view) {
-        Intent intent=new Intent(news.this, land.class);
+        Intent intent=new Intent(news.this, Home.class);
         startActivity(intent);
     }
     private class Callback extends WebViewClient {

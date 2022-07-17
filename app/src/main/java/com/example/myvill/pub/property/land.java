@@ -1,4 +1,4 @@
-package com.example.myvill.pub;
+package com.example.myvill.pub.property;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +14,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.myvill.R;
-import com.example.myvill.pub.property.land;
-import com.example.myvill.pub.property.mojini;
+import com.example.myvill.pub.Home;
+import com.example.myvill.pub.education;
+import com.example.myvill.pub.news;
 import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class land extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -32,7 +33,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_land);
 
         //Menu hooks
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -120,47 +121,44 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
-    public void education(View view) {
-        Intent intent = new Intent(Home.this, education.class);
+    public void services(View view) {
+        Intent intent = new Intent(land.this, revenue.class);
         startActivity(intent);
     }
 
-    public void healthcare(View view) {
-        Intent intent = new Intent(Home.this, healthcare.class);
+    public void news(View view) {
+        Intent intent = new Intent(land.this, news.class);
         startActivity(intent);
     }
 
-    public void generalshops(View view) {
-        Intent intent = new Intent(Home.this, generalshops.class);
+    public void status(View view) {
+        Intent intent = new Intent(land.this, status.class);
         startActivity(intent);
     }
 
-    public void government(View view) {
-        Intent intent = new Intent(Home.this, government.class);
+    public void general_info(View view) {
+        Intent intent = new Intent(land.this, SketchReport.class);
         startActivity(intent);
     }
 
     public void community(View view) {
-        Intent intent = new Intent(Home.this, education.class);
+        Intent intent = new Intent(land.this, pedencyReport.class);
         startActivity(intent);
     }
 
     public void property(View view) {
-        Intent intent = new Intent(Home.this, education.class);
+        Intent intent = new Intent(land.this, property.class);
         startActivity(intent);
     }
 
 
     public void road(View view) {
-        Intent intent = new Intent(Home.this, education.class);
+        Intent intent = new Intent(land.this, road.class);
         startActivity(intent);
 
     }
 
-    public void add(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
+
 
 
 //    public void trade(View view) {

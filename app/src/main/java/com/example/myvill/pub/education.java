@@ -1,29 +1,49 @@
 package com.example.myvill.pub;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
+import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.myvill.R;
+import com.example.myvill.adapter.CustomAdapter;
 import com.example.myvill.pub.property.land;
 import com.example.myvill.pub.property.mojini;
 import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
+public class education extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    RecyclerView recyclerView;
+
+    ArrayList<String> name = new ArrayList<>();
+    ArrayList<String> address = new ArrayList<>();
+    ArrayList<String> phone = new ArrayList<>();
+
+
+    //Navigation
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ImageView menu_icon;
     LinearLayout contentView;
+    ImageView menu;
 
     static final float END_SCALE = 0.7f;
 
@@ -31,15 +51,60 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.list_contacts);
 
-        //Menu hooks
+        Adapter adapter;
+
+
+        recyclerView = findViewById(R.id.recyclerview);
+        menu = findViewById(R.id.menu_icon);
+
+
+        //navigation
+        contentView = findViewById(R.id.content);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
-        menu_icon = findViewById(R.id.menu_icon);
-        contentView = findViewById(R.id.content);
         navigationDrawer();     //Navigation Drawer
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        try {
+            JSONObject obj = new JSONObject(loadJSONfromAssets());
+
+            JSONArray array = obj.getJSONArray("education");
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject details = array.getJSONObject(i);
+                name.add(details.getString("name"));
+                address.add(details.getString("address"));
+                phone.add(details.getString("phone"));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        CustomAdapter customAdapter = new CustomAdapter(name,address,phone, education.this);
+        recyclerView.setAdapter(customAdapter);
+
+
+    }
+
+    private String loadJSONfromAssets() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("contacts.json");
+            int size = is.available();
+
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            json = new String(buffer, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
 
@@ -48,7 +113,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_home);
 
-        menu_icon.setOnClickListener(new View.OnClickListener() {
+        menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (drawerLayout.isDrawerVisible(GravityCompat.START))
@@ -59,6 +124,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         });
         animateNavigationDrawer();
     }
+
 
     private void animateNavigationDrawer() {
 
@@ -87,19 +153,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerVisible(GravityCompat.START))
-            drawerLayout.closeDrawer(GravityCompat.START);
-        else
-            super.onBackPressed();
-    }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intent1 = new Intent(getApplicationContext(), Home.class);
+                Intent intent1 = new Intent(getApplicationContext(), education.class);
                 startActivity(intent1);
                 break;
             case R.id.nav_services:
@@ -116,55 +177,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
         }
         return true;
-
     }
 
-
-    public void education(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
-
-    public void healthcare(View view) {
-        Intent intent = new Intent(Home.this, healthcare.class);
-        startActivity(intent);
-    }
-
-    public void generalshops(View view) {
-        Intent intent = new Intent(Home.this, generalshops.class);
-        startActivity(intent);
-    }
-
-    public void government(View view) {
-        Intent intent = new Intent(Home.this, government.class);
-        startActivity(intent);
-    }
-
-    public void community(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
-
-    public void property(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
-
-
-    public void road(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-
-    }
-
-    public void add(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
-
-
-//    public void trade(View view) {
-//        Intent intent=new Intent(land.this, trade.class);
+//    public void add(String view) {
+//        Intent intent = new Intent(education.this, login_admin.class);
 //        startActivity(intent);
 //    }
 }

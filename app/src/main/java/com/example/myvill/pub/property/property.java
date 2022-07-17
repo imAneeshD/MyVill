@@ -1,4 +1,4 @@
-package com.example.myvill.pub;
+package com.example.myvill.pub.property;
 
 import androidx.appcompat.app.AppCompatActivity;
 
