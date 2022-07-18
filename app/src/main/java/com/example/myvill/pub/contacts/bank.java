@@ -1,4 +1,4 @@
-package com.example.myvill.pub;
+package com.example.myvill.pub.contacts;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myvill.R;
 import com.example.myvill.adapter.CustomAdapter;
+import com.example.myvill.pub.Home;
+import com.example.myvill.pub.news;
 import com.example.myvill.pub.property.land;
 import com.example.myvill.pub.property.mojini;
 import com.google.android.material.navigation.NavigationView;
@@ -29,7 +31,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class education extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class bank extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     RecyclerView recyclerView;
@@ -43,7 +45,7 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     LinearLayout contentView;
-    ImageView menu;
+    ImageView menu, back;
 
     static final float END_SCALE = 0.7f;
 
@@ -58,7 +60,14 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
 
         recyclerView = findViewById(R.id.recyclerview);
         menu = findViewById(R.id.menu_icon);
-
+        back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(bank.this, Home.class);
+                startActivity(intent);
+            }
+        });
 
         //navigation
         contentView = findViewById(R.id.content);
@@ -72,7 +81,7 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
         try {
             JSONObject obj = new JSONObject(loadJSONfromAssets());
 
-            JSONArray array = obj.getJSONArray("education");
+            JSONArray array = obj.getJSONArray("bank");
             for (int i = 0; i < array.length(); i++) {
                 JSONObject details = array.getJSONObject(i);
                 name.add(details.getString("name"));
@@ -83,7 +92,7 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
             e.printStackTrace();
         }
 
-        CustomAdapter customAdapter = new CustomAdapter(name,address,phone, education.this);
+        CustomAdapter customAdapter = new CustomAdapter(name, address, phone, bank.this);
         recyclerView.setAdapter(customAdapter);
 
 
@@ -154,8 +163,6 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
     }
 
 
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -179,8 +186,5 @@ public class education extends AppCompatActivity implements NavigationView.OnNav
         return true;
     }
 
-//    public void add(String view) {
-//        Intent intent = new Intent(education.this, login_admin.class);
-//        startActivity(intent);
-//    }
+
 }

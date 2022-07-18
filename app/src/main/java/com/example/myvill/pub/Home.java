@@ -14,6 +14,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.myvill.R;
+import com.example.myvill.pub.contacts.education;
+import com.example.myvill.pub.contacts.generalshops;
+import com.example.myvill.pub.contacts.government;
+import com.example.myvill.pub.contacts.healthcare;
+import com.example.myvill.pub.contacts.temples;
 import com.example.myvill.pub.property.land;
 import com.example.myvill.pub.property.mojini;
 import com.google.android.material.navigation.NavigationView;
@@ -140,25 +145,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         startActivity(intent);
     }
 
-    public void community(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
 
-    public void property(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
-
-
-    public void road(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-
-    }
-
-    public void add(View view) {
-        Intent intent = new Intent(Home.this, education.class);
+    public void temple(View view) {
+        Intent intent = new Intent(Home.this, temples.class);
         startActivity(intent);
     }
 

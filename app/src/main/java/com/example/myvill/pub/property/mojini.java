@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myvill.R;
 import com.example.myvill.pub.Home;
-import com.example.myvill.pub.education;
 
 public class mojini extends AppCompatActivity {
 

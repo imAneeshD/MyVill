@@ -42,14 +42,6 @@
                 android:src="@drawable/menu_icon"
                 tools:ignore="InvalidId" />
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="19dp"
-                android:background="@color/banner_background_light"
-                android:onClick="add"
-                android:src="@drawable/add_ic" />
 
         </RelativeLayout>
 
@@ -138,10 +130,10 @@
                             android:onClick="education">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/servicelog" />
+                                android:src="@drawable/education" />
 
                         </RelativeLayout>
 
@@ -171,10 +163,10 @@
                             android:onClick="healthcare">
 
                             <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_centerHorizontal="true"
-                                android:src="@drawable/news" />
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/hospital" />
 
                         </RelativeLayout>
 
@@ -205,10 +197,11 @@
                             android:onClick="generalshops">
 
                             <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/communities" />
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/shops" />
 
                         </RelativeLayout>
 
@@ -249,10 +242,10 @@
                             android:onClick="government">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/status" />
+                                android:src="@drawable/government" />
 
                         </RelativeLayout>
 
@@ -261,7 +254,7 @@
                             android:layout_height="38dp"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Government Office"
+                            android:text="Government Sector"
                             android:textAlignment="center"
 
                             android:textColor="@color/black" />
@@ -280,13 +273,13 @@
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
                             android:elevation="8dp"
-                            android:onClick="general_info">
+                            android:onClick="temple">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="39dp"
+                                android:layout_height="37dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/info" />
+                                android:src="@drawable/temple" />
 
                         </RelativeLayout>
 
@@ -312,14 +305,14 @@
                             android:layout_height="60dp"
                             android:layout_margin="10dp"
                             android:background="@drawable/card1"
-                            android:elevation="8dp"
-                            android:onClick="property">
+                            android:elevation="8dp">
+
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/earth" />
+                                android:src="@drawable/bank" />
 
                         </RelativeLayout>
 
@@ -328,7 +321,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center_horizontal"
-                            android:text="Police Station"
+                            android:text="Bank"
                             android:textColor="@color/black"
 
                             android:textAlignment="center" />

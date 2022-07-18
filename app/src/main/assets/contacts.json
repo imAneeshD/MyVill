@@ -23,66 +23,68 @@
   ],
   "healthcare": [
     {
-      "name": "med 1",
-      "address": "address 1",
-      "phone": "987654321"
+      "name": "Puttur City Hospital",
+      "address": "APMC ROAD, Puttur",
+      "phone": "082512 37781"
     },
     {
-      "name": "med 2",
-      "address": "address 2",
-      "phone": "987654321"
+      "name": "Adarsha Hospital",
+      "address": "APMC ROAD, Puttur",
+      "phone": "082512 35065"
     },
     {
-      "name": "med 3",
-      "address": "address 3",
-      "phone": "987654321"
+      "name": "Mahaveer Medical Centre",
+      "address": "Main Road, Bolwar, Puttur",
+      "phone": "082512 34282"
     },
     {
-      "name": "med 4",
-      "address": "address 4",
-      "phone": "987654321"
+      "name": "Pragati Multi Speciality Hospital",
+      "address": "Bolwar, Puttur",
+      "phone": "08251231026"
     }
   ],
   "general": [
     {
-      "name": "gen 1",
-      "address": "address 1",
-      "phone": "987654321"
+      "name": "Mangal Store, Puttur",
+      "address": "Nehru Nagar, Puttur",
+      "phone": "094810 23990"
     },
     {
-      "name": "gen 2",
-      "address": "address 2",
-      "phone": "987654321"
-    },
-    {
-      "name": "gen 3",
-      "address": "address 3",
-      "phone": "987654321"
-    },
-    {
-      "name": "gen 4",
-      "address": "address 4",
-      "phone": "987654321"
+      "name": "More Supermarket",
+      "address": "Bolwar, Puttur",
+      "phone": "097439 91450"
     }
   ],
   "government": [
     {
-      "name": "gov 1",
+      "name": "B.E.O Office Puttur Tq",
+      "address": "Puttur, Karnataka 574201",
+      "phone": "082512 30827"
+    },
+    {
+      "name": "MESCOM Puttur Division Office",
+      "address": "Bannur, Puttur",
+      "phone": "08251236412"
+    }
+  ],
+  "temple": [
+    {
+      "name": "tem 1",
       "address": "address 1",
       "phone": "987654321"
     },
     {
-      "name": "gov 2",
+      "name": "tem 2",
       "address": "address 2",
       "phone": "987654321"
     },
     {
-      "name": "gov 3",
+      "name": "tem 3",
       "address": "address 3",
       "phone": "987654321"
     },
     {
-      "name": "gov 4",
+      "name": "tem 4",
       "address": "address 4",
       "phone": "987654321"
     }

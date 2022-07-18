@@ -66,7 +66,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="122dp">
 
                     <TextView
                         android:id="@+id/app_name"
@@ -93,8 +93,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="15dp"
-                             />
+                            android:layout_marginLeft="15dp" />
 
                         <ImageView
                             android:layout_width="30dp"
@@ -138,9 +137,10 @@
                             android:onClick="services">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
                                 android:src="@drawable/servicelog" />
 
                         </RelativeLayout>
@@ -171,9 +171,10 @@
                             android:onClick="news">
 
                             <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
                                 android:onClick="news"
                                 android:src="@drawable/news" />
 
@@ -206,9 +207,10 @@
                             android:onClick="community">
 
                             <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
                                 android:src="@drawable/communities" />
 
                         </RelativeLayout>
@@ -250,9 +252,10 @@
                             android:onClick="status">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
                                 android:src="@drawable/status" />
 
                         </RelativeLayout>
@@ -284,9 +287,10 @@
                             android:onClick="general_info">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
                                 android:src="@drawable/info" />
 
                         </RelativeLayout>
@@ -317,9 +321,10 @@
                             android:onClick="property">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
                                 android:src="@drawable/earth" />
 
                         </RelativeLayout>

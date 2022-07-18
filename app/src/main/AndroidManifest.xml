@@ -25,7 +25,7 @@
             android:name=".pub.property.mojini"
             android:exported="false" />
         <activity
-            android:name=".pub.education"
+            android:name=".pub.contacts.education"
             android:exported="false" />
         <activity
             android:name=".pub.property.status"
@@ -52,13 +52,16 @@
             android:name=".pub.property.circular"
             android:exported="false" />
         <activity
-            android:name=".pub.generalshops"
+            android:name=".pub.contacts.generalshops"
             android:exported="false" />
         <activity
-            android:name=".pub.healthcare"
+            android:name=".pub.contacts.healthcare"
             android:exported="false" />
         <activity
-            android:name=".pub.government"
+            android:name=".pub.contacts.government"
+            android:exported="false" />
+        <activity
+            android:name=".pub.contacts.temples"
             android:exported="false" />
         <activity
             android:name=".common.SplashScreen"
