@@ -22,6 +22,8 @@
         app:menu="@menu/main_menu"
         />
 
+
+
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -46,7 +48,7 @@
             <ImageView
                 android:id="@+id/back"
                 android:layout_width="60dp"
-                android:layout_height="90dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="19dp"
                 android:background="@color/banner_background_light"

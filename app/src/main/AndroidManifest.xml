@@ -19,6 +19,15 @@
         android:theme="@style/Theme.MyVill"
         tools:targetApi="31">
         <activity
+            android:name=".profile.deepika"
+            android:exported="false" />
+        <activity
+            android:name=".profile.aneesh"
+            android:exported="false" />
+        <activity
+            android:name=".profile.profile"
+            android:exported="false" />
+        <activity
             android:name=".pub.Home"
             android:exported="false" />
         <activity

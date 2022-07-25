@@ -8,16 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.myvill.R;
-
 import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
-
 
     ArrayList<String> name;
     ArrayList<String> address;
@@ -30,7 +26,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         this.phone = phone;
         this.ctx = ctx;
     }
-
 
     @NonNull
     @Override
@@ -61,7 +56,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         return name.size();
     }
 
-
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, address, phone;
@@ -69,14 +63,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             name = itemView.findViewById(R.id.c_name);
             address = itemView.findViewById(R.id.c_address);
             phone = itemView.findViewById(R.id.c_phone);
             call = itemView.findViewById(R.id.call);
         }
-
     }
-
-
 }

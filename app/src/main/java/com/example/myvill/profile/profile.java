@@ -1,4 +1,4 @@
-package com.example.myvill.pub;
+package com.example.myvill.profile;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,22 +14,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.myvill.R;
-import com.example.myvill.profile.profile;
-import com.example.myvill.pub.contacts.education;
-import com.example.myvill.pub.contacts.generalshops;
-import com.example.myvill.pub.contacts.government;
-import com.example.myvill.pub.contacts.healthcare;
-import com.example.myvill.pub.contacts.temples;
+import com.example.myvill.pub.Home;
+import com.example.myvill.pub.news;
 import com.example.myvill.pub.property.land;
 import com.example.myvill.pub.property.mojini;
 import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class profile extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ImageView menu_icon;
     LinearLayout contentView;
+    ImageView deepika, aneesh;
 
     static final float END_SCALE = 0.7f;
 
@@ -38,13 +36,32 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_profile);
 
         //Menu hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
         menu_icon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
+
+        deepika = findViewById(R.id.profile1);
+        aneesh = findViewById(R.id.profile2);
+        deepika.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(profile.this, com.example.myvill.profile.deepika.class);
+                startActivity(intent);
+            }
+        });
+
+        aneesh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(profile.this, com.example.myvill.profile.aneesh.class);
+                startActivity(intent);
+            }
+        });
+
         navigationDrawer();     //Navigation Drawer
     }
 
@@ -52,7 +69,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private void navigationDrawer() {
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.profile);
 
         menu_icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,39 +145,17 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         return true;
 
     }
-
-
-    public void education(View view) {
-        Intent intent = new Intent(Home.this, education.class);
-        startActivity(intent);
-    }
-
-    public void healthcare(View view) {
-        Intent intent = new Intent(Home.this, healthcare.class);
-        startActivity(intent);
-    }
-
-    public void generalshops(View view) {
-        Intent intent = new Intent(Home.this, generalshops.class);
-        startActivity(intent);
-    }
-
-    public void government(View view) {
-        Intent intent = new Intent(Home.this, government.class);
-        startActivity(intent);
-    }
-
-
-    public void temple(View view) {
-        Intent intent = new Intent(Home.this, temples.class);
-        startActivity(intent);
-    }
-
-
-
-
-//    public void trade(View view) {
-//        Intent intent=new Intent(land.this, trade.class);
-//        startActivity(intent);
-//    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
