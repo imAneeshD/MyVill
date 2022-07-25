@@ -141,6 +141,10 @@ public class profile extends AppCompatActivity implements  NavigationView.OnNavi
                 Intent intent5 = new Intent(getApplicationContext(), profile.class);
                 startActivity(intent5);
                 break;
+            case R.id.aboutus:
+                Intent intent6 = new Intent(getApplicationContext(), profile.class);
+                startActivity(intent6);
+                break;
         }
         return true;
 

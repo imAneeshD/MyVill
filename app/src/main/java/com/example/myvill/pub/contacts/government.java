@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myvill.R;
 import com.example.myvill.adapter.CustomAdapter;
+import com.example.myvill.profile.profile;
 import com.example.myvill.pub.Home;
 import com.example.myvill.pub.news;
 import com.example.myvill.pub.property.land;
@@ -181,6 +182,14 @@ public class government extends AppCompatActivity implements NavigationView.OnNa
             case R.id.nav_land:
                 Intent intent4 = new Intent(getApplicationContext(), land.class);
                 startActivity(intent4);
+                break;
+            case R.id.profile:
+                Intent intent5 = new Intent(getApplicationContext(), profile.class);
+                startActivity(intent5);
+                break;
+            case R.id.aboutus:
+                Intent intent6 = new Intent(getApplicationContext(), profile.class);
+                startActivity(intent6);
                 break;
         }
         return true;
